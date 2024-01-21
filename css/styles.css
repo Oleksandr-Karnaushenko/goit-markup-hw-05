@@ -391,11 +391,9 @@ img {
 .footer-subscribe {
   margin-left: 80px;
 }
-.footer-social-label {
-  display: block;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 16px;
+.footer-subscribe-form {
+  display: flex;
+  gap: 24px;
 }
 .input-subscribe-email {
   width: 264px;
@@ -403,28 +401,38 @@ img {
   color: #fff;
   background-color: #2e2f42;
   border: 1px solid #fff;
+  background-color: transparent;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
 }
 .input-subscribe-email::placeholder {
-  padding-left: 16px;
   color: #fff;
-  font-size: 12px;
-  line-height: 2; /* 200% */
-  letter-spacing: 0.048em;
 }
 .subscribe-btn {
-  width: 165px;
+  min-width: 165px;
   height: 40px;
-  display: inline-flex;
+  display: flex;
   padding: 8px 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  cursor: pointer;
+  border: none;
 }
+.footer-subscribe-svg {
+  fill: #ffffff;
+  margin-left: 16px;
+}
+
 /* backdrop */
 
 .backdrop {
@@ -456,7 +464,7 @@ img {
   border-radius: 4px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
   width: 24px;
@@ -512,7 +520,7 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
-  letter-spacing: 0.048em;
+  letter-spacing: 0.04em;
 }
 .modal-input-wrap {
   position: relative;
@@ -541,6 +549,12 @@ img {
   transform: translatey(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.last-input {
+  margin-bottom: 16px;
+}
+.modal-element-textarea {
+  margin-bottom: 24px;
+}
 .modal-input-textarea {
   height: 120px;
   padding: 0;
@@ -562,15 +576,45 @@ img {
   width: 16px;
   height: 16px;
 }
+.form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-akcept:checked .form-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+.checkbox-svg {
+}
 .form-link {
   color: #4d5ae5;
   text-decoration-line: underline;
 }
 .modal-submit-btn {
+  display: block;
   min-width: 169px;
+  height: 56px;
   margin: auto;
   padding: 16px 32px;
   color: #ffffff;
   background-color: #4d5ae5;
   border-radius: 4px;
+  font-weight: 500;
+  line-height: 1, 5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: #404bbf;
 }
